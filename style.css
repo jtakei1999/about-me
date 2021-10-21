@@ -1,0 +1,353 @@
+* {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+}
+
+/*共通*/
+body {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+a,
+li,
+h1,
+h2,
+p {
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  font-weight: normal;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  background-color: rgb(146, 145, 145);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+header .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.color {
+  color: white;
+}
+.header-left a {
+  font-size: 140%;
+  margin-left: 30px;
+}
+.header-right {
+  margin-right: 20px;
+}
+.header-right li {
+  float: left;
+}
+.header-right li a {
+  padding: 10px 30px 16px;
+  transition: all 0.5s;
+}
+.header-right li a:hover {
+  background-color: rgba(218, 208, 208);
+}
+
+.top-page {
+  background-image: url("photo-1500829243541-74b677fecc30.jfif");
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 290px 0 290px;
+}
+.top-page h1 {
+  font-size: 230%;
+  margin-bottom: 20px;
+}
+.top-page p {
+  font-size: 130%;
+}
+.sns-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+.fab {
+  display: block;
+  font-size: 180%;
+  color: black;
+  text-align: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-top: 10px;
+  margin: 5px 5px 0;
+  transition: all 0.5s;
+}
+.sns-btn .fab:hover {
+  color: white;
+  background-color: black;
+}
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+.btn-text:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /*テキストからの距離*/
+  width: 0%; /*初期状態では下線非表示*/
+  height: 2px; /*下線の高さ*/
+  background: #fff; /*下線の色*/
+  z-index: -1;
+  transition: all 0.4s; /*アニメーション速度*/
+}
+.button:hover .btn-text:after {
+  width: 100%; /*hover時に表示*/
+}
+.contact-btn {
+  display: block;
+  padding: 10px 20px;
+  margin: 20px auto 0;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 120%;
+  border-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.contact-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+main .container {
+  width: 70%;
+}
+.size {
+  padding: 0 0 100px;
+}
+.main-title {
+  display: inline-block;
+  font-size: 230%;
+  padding-bottom: 10px;
+  margin: 0 auto 10px;
+  border-bottom: 2px solid rgb(162, 163, 162);
+}
+.top {
+  margin-top: 80px;
+}
+.main-text {
+  display: block;
+  width: 100%;
+  word-break: break-all;
+}
+
+.item2-topic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+.topic-text {
+  word-break: break-all;
+  text-align: left;
+  width: 45%;
+}
+.topic-text h3 {
+  font-size: 150%;
+}
+.bottom {
+  margin-bottom: 15px;
+}
+.topic-img {
+  width: 45%;
+}
+.topic-img img {
+  width: 95%;
+  height: 400px;
+}
+.more {
+  display: block;
+  width: 6%;
+  position: absolute;
+  right: 15%;
+}
+.more a {
+  color: black;
+}
+.more .fas {
+  padding-right: 10px;
+}
+.main-item2 .btn-text:after {
+  background: black;
+}
+
+.point-style {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+.point {
+  width: 30%;
+  border: 2px solid rgb(162, 163, 162);
+  padding: 0 0 20px;
+}
+.point img {
+  width: 100%;
+}
+.point h3 {
+  margin: 10px 0 20px;
+}
+.point p {
+  word-break: break-all;
+  text-align: left;
+}
+.point-text {
+  padding: 0 10px;
+}
+
+.questions {
+  margin-top: 70px;
+}
+.question {
+  text-align: left;
+  width: 80%;
+  margin: 5px auto 0;
+}
+.q-part h3 {
+  font-weight: normal;
+  border: 1px solid rgb(162, 163, 162);
+  border-radius: 50px;
+  padding: 7px;
+  cursor: pointer;
+}
+.q-part .far {
+  padding: 0 5px;
+}
+.q-part {
+  position: relative;
+}
+.q-part:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 38%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px black;
+  border-right: solid 2px black;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.q-part.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 45%;
+}
+.a-part {
+  display: none;
+}
+.a-part p {
+  word-break: break-all;
+  padding: 20px;
+  border-bottom: 1px solid rgb(162, 163, 162);
+}
+
+.contact-part h2 {
+  border-top: 1px solid rgb(214, 213, 213);
+  padding-top: 40px;
+  margin: 50px 0 50px;
+}
+.contact-part p {
+  text-align: left;
+  width: 60%;
+  margin: 0 auto;
+}
+.txt,
+textarea {
+  width: 60%;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 1px solid rgb(214, 213, 213);
+}
+.txt {
+  border-radius: 20px;
+}
+textarea {
+  border-radius: 10px;
+  height: 100px;
+}
+.btn-color {
+  background-color: rgb(214, 213, 213);
+}
+
+.sns-part {
+  background-color: rgb(214, 213, 213);
+  padding: 20px 0;
+  margin-top: 100px;
+}
+.all-sns {
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.all-sns a {
+  border-radius: 50%;
+}
+.all-sns a:hover {
+  background-color: black;
+  color: white;
+}
+.while a {
+  margin: 0 10px;
+}
+
+footer {
+  background-color: rgb(46, 42, 42);
+}
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  padding-bottom: 30px;
+}
+footer p {
+  padding: 30px 0;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer small {
+  display: block;
+  background-color: black;
+  font-size: 50%;
+  padding: 30px 0;
+  margin: 0 auto;
+  text-align: center;
+}
