@@ -183,7 +183,7 @@ main .container {
 }
 .topic-img img {
   width: 95%;
-  height: 400px;
+  height: 70%;
 }
 .more {
   display: block;
@@ -262,14 +262,34 @@ main .container {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
+.open-q-part:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 38%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: solid 2px black;
+  border-left: solid 2px black;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
 .q-part.open:after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 45%;
 }
+
 .a-part {
   display: none;
 }
+.a-show {
+  display: block;
+}
+
 .a-part p {
   word-break: break-all;
   padding: 20px;
