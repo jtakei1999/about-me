@@ -9,8 +9,6 @@ const answer4 = document.getElementById("answer4");
 const myPhoto = document.getElementById("my-photo");
 const topicText = document.getElementById("topic-text");
 
-let delay = 1000 / 50;
-
 quiz1.onclick = function () {
   answer1.classList.toggle("a-show");
   quiz1.classList.toggle("open-q-part");
